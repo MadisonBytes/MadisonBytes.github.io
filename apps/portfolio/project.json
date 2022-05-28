@@ -7,7 +7,7 @@
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/portfolio",
+        "outputPath": "docs/",
         "index": "apps/portfolio/src/index.html",
         "main": "apps/portfolio/src/main.ts",
         "polyfills": "apps/portfolio/src/polyfills.ts",
@@ -19,6 +19,7 @@
       },
       "configurations": {
         "production": {
+          "baseHref": "https://madisonbytes.github.io/",
           "budgets": [
             {
               "type": "initial",
