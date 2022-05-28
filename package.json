@@ -10,6 +10,14 @@
     "test": "nx test",
     "prepare": "husky install"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*": "prettier --write . && git add -A ."
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.3.0",
