@@ -1,7 +1,7 @@
 {
   "projectType": "application",
   "sourceRoot": "apps/portfolio/src",
-  "prefix": "MadisonBytes.github.io",
+  "prefix": "portfolio",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
