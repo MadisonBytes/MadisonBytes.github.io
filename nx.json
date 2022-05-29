@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "MadisonBytes.github.io",
+  "npmScope": "bytes",
   "affected": {
     "defaultBase": "master"
   },
