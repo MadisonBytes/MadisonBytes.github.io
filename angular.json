@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "header": "libs/header",
+    "header-e2e": "apps/header-e2e",
     "portfolio": "apps/portfolio",
     "portfolio-e2e": "apps/portfolio-e2e"
   }
