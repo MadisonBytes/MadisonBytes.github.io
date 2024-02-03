@@ -10,7 +10,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 This project is configured to work with [GitHub Pages](https://pages.github.com/). 
 
-These are steps I took to create my angular project and get it set up with GitHub Pages.
+These are steps I took to create my angular project and get it set up with GitHub Pages. [Click Here](https://madisonbytes.github.io/) to see the result!
 
 ### Step 1: Environment Setup
 
