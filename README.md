@@ -1,27 +1,81 @@
 # Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# GitHub Pages
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This project is configured to work with GitHub Pages. 
 
-## Build
+These are steps I took to create my angular project and get it set up with GitHub Pages.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Step 1: Environment Setup
 
-## Running unit tests
+Use the Angular Set Up Guide https://angular.io/guide/setup-local to make sure your environment is set up to create a new project.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Step 2: Create a Repository
 
-## Running end-to-end tests
+To use GitHub Pages, create a new **Public** repository and name it _username.github.io_.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Step 3: Clone Repository
 
-## Further help
+In your terminal, navigate to your preferred project location and clone the repository.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+$ git clone https://github.com/MadisonBytes/MadisonBytes.github.io.git
+$ cd MadisonBytes.github.io.git
+```
+
+## Step 4: Create Angular Project
+
+Generate new angular project in the current directory. (I also enabled routing to automatically create the app-routing.module, and set my styling preference to scss.)
+
+```
+$ ng new portfolio --routing --style=scss --directory ./
+```
+
+## Step 5: Update Build Paths
+
+Change the build path of the angular project (GitHub Pages only allows you to choose from your root directory, or a folder called 'docs'). Additionally, you need to set the baseUrl for building.
+
+So in the angular.json file, update **outputPath** and add **baseHref**. Mine looks something like this:
+
+```
+{
+  "projects": {
+      ... 
+      "architect": {
+        "build": {
+          "options": {
+            "outputPath": "docs/",
+             ...
+          },
+          "configurations": {
+            "production": {
+              "baseHref": "https://madisonbytes.github.io/",
+              ...
+```
+
+You also need to update your Git Repository Settings under `Settings>Pages` 
+
+- Source: Deploy from a branch
+- Branch: master
+- Folder: /docs
+
+make sure to `Save` your changes.
+
+## Step 6: Build your Project and Push
+
+Build your project, and push changes to master
+
+```
+$ ng build
+$ git add .
+$ git commit
+$ git push
+```
+
+And that should be the basic project set up to use GitHub Pages!
