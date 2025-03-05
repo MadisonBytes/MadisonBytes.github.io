@@ -41,7 +41,7 @@ $ ng new portfolio --routing --style=scss --directory ./
 
 Change the build path of the angular project (GitHub Pages only allows you to choose from your root directory, or a folder called 'docs'). Additionally, you need to set the baseUrl for building.
 
-So in the angular.json file, update **outputPath** and add **baseHref**. Mine looks something like this:
+So in the `angular.json` file, update **outputPath** and add **baseHref**. Mine looks something like this:
 
 ```
 {
