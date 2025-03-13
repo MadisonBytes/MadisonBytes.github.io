@@ -1,0 +1,6 @@
+<div class="projects-container">
+    <mat-card class="project-card" *ngFor="let project of projects" (click)="goToProject(project.id)">
+        <mat-card-title>{{ project.name }}</mat-card-title>
+        <mat-card-content>{{ project.description }}</mat-card-content>
+    </mat-card>
+</div>
